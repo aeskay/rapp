@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Eskay's Running App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="css/fontawesome-free-5.14.0-web/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/rapp.css"/>
+</head>
+<body>
+    <header>
+        <div class="headerDiv">
+            <div class="faIcon">
+                <i class="fas fa-ellipsis-v" id="menuBtn"></i>
+            </div>
+            <div class="logoDiv">
+                <h2>RAPP</h2>
+                <p>The Trusted Running App</p>
+            </div>
+            <hr class="hRule"/>       
+        </div>    
+    </header>
+    <div class="infoDiv hider" id="infoDiv">
+        <h5>ABOUT RAPP v1.0</h5>
+        <p>Rapp is a simple application that records your weekly running progress.
+            You simply enter the distance you run each day and it will be recorded, and some calculations will be carried out and displayed to you.<br/><br/>
+            The calculations are: Total Distance, Average Distance, Week's Highest.
+        </p>
+
+        <h5>THE AUTHOR</h5>
+        <p>Eskay is a Front-end web developer who looks forward to developing many more cool applications!</p>
+    
+    </div>
+    <section class="sectionOne">
+        <div class="bodyDiv">
+            <img src="images/rapp.png" alt="" width="100%" class="img-responsive mainImg">
+        </div>
+    </section>
+
+    <section class="sectionTwo">
+        <div class="inputDiv">
+            <form onsubmit="return false">
+                <label for="distance"></label>
+                <input type="text" id="input" placeholder="Enter Distance Ran Today (m)">
+                <button onclick="submitFunc()" type="submit" class="submitBtn" id="submitBtn">Submit</button>
+            </form>
+            <span id="errDisp"></span>
+        </div>
+        
+        <div class="listDiv">
+            <h5 style="text-align: center;">Day 1 to Day 7 Distances</h5>
+            <hr style="width: 90%; margin-left: 50px;"/>
+            <ul class="runInput" id="runInput">
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+                <li class="runInputs">--</li>
+            </ul>
+        </div>
+    </section>
+    <section class="sectionThree">
+        <div class="displays">
+            <h5>Total Distance</h5>
+            <span id="totalDist">00</span>
+        </div>
+        <hr class="dispLine"/>
+        <div class="displays">
+            <h5>Average Distance</h5>
+            <span id="avgDist">00</span>
+        </div>
+        <hr class="dispLine"/>
+        <div class="displays">
+            <h5>Week's Highest</h5>
+            <span id="highDist">00</span>
+        </div>
+        <hr class="dispLine"/>
+    </section>
+
+    <footer>
+        &copy; Copyright <span id="year"></span>, SKA Technologies
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="js/rapp.js"></script>
+</body>
+</html>

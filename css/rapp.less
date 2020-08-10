@@ -1,0 +1,188 @@
+@background: #202020;
+@color: #d3d3d3;
+@Roboto : {
+    font-family: 'Roboto', sans-serif;
+};
+@bg2: #f2f2f2;
+
+@media(min-width: 800px){
+    body{
+        width: 800px;
+        margin: 0px auto;
+        border: 3px solid @color;
+    }
+
+    .infoDiv{
+        width: 600px;
+    }
+}
+
+body{
+    // color: @color;
+    // background: @background;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 10px 0px;
+    text-align: center;
+    background: @background;
+    color: @color;
+}
+
+h2{
+    font-family: 'Rowdies', cursive;
+    
+}
+
+p{
+    @Roboto();
+}
+
+.hRule{
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:@color;
+    width: 10%;
+}
+
+.sectionOne{
+    background: linear-gradient(15deg, @bg2 45%, @background calc(45% + 2px))
+}
+
+.bodyDiv{
+    text-align: center;
+}
+
+.sectionTwo{
+    background: @bg2;
+}
+
+.inputDiv{
+    text-align: center;
+}
+
+input{
+    width: 70%;
+    height: 40px;
+    border: 2px solid #cecece;
+    box-shadow: 1px 1px 14px -1px #7a7a7a;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+input::placeholder{
+    padding-left: 15px;;
+    color: @background;
+}
+
+button{
+    background: @background;
+    height: 40px;
+    padding: 0px 30px;
+    box-shadow: 1px 1px 14px -1px #7a7a7a;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    font-weight:  bold;
+}
+
+button:hover{
+    animation-name: btnHover;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    box-shadow: 1px 1px 14px -1px #036881;
+}
+
+@keyframes btnHover{
+    0%{background: @background}
+    100%{background: #048ec5;}
+}
+
+.listDiv{
+    margin-top:30px;
+    padding: 30px 0px;
+    margin-left: -25px;
+}
+
+.runInput{
+    display: flex;
+    justify-content: space-around;
+}
+
+.runInputs{
+    border: 1px solid #cecece;
+    padding: 10px 15px;
+    list-style: none;
+    box-shadow: 1px 1px 4px -1px #b1b1b1;
+}
+
+.sectionThree{
+    background: @background;
+    color: @color;
+    padding: 30px;
+}
+
+.displays{
+    display: flex;
+    justify-content: space-between;
+}
+
+.displays span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dispLine{
+    width: 90%;
+    background: @color;
+}
+
+footer{
+    background: black;
+    padding: 10px 0px;
+    color: @color;
+    text-align: center;
+}
+
+#errDisp{
+    color: red;
+}
+
+.fas{
+    color: @color;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.faIcon{
+    float: right;
+    padding: 20px 30px 0px 0px;
+}
+
+.logoDiv{
+    margin-left: 40px;
+}
+
+.infoDiv{
+    padding: 30px;
+    margin: 50px;
+    background: rgba(0,0,0,0.95);
+    color: @color;
+    border-radius: 20px;
+    position: fixed;
+    margin-top: 0px;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-name: shower;
+}
+
+@keyframes shower{
+    0%{opacity: 0};
+    100%{opacity: 1;}
+}
+
+.hider{
+   display: none;
+}
