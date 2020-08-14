@@ -25,11 +25,11 @@
     <div class="infoDiv hider" id="infoDiv">
         <h5>ABOUT RAPP v1.0</h5>
         <p>Rapp is a simple application that records your weekly running progress.
-            You simply enter the distance you run each day and it will be recorded, and some calculations will be carried out and displayed to you.<br/><br/>
+            You simply enter the distance you run each day (in kilometers) and it will be recorded, and some calculations will be carried out and displayed to you.<br/><br/>
             The calculations are: Total Distance, Average Distance, Week's Highest.
         </p>
 
-        <h5>THE AUTHOR</h5>
+        <h5>THE DEVELOPER</h5>
         <p>Eskay is a Front-end web developer who looks forward to developing many more cool applications!</p>
     
     </div>
@@ -43,14 +43,14 @@
         <div class="inputDiv">
             <form onsubmit="return false">
                 <label for="distance"></label>
-                <input type="text" id="input" placeholder="Enter Distance Ran Today (m)">
+                <input type="text" id="input" placeholder="Enter Distance Ran Today (km)">
                 <button onclick="submitFunc()" type="submit" class="submitBtn" id="submitBtn">Submit</button>
             </form>
             <span id="errDisp"></span>
         </div>
         
         <div class="listDiv">
-            <h5 style="text-align: center;">Day 1 to Day 7 Distances</h5>
+            <h5 style="text-align: center;">Day 1 to Day 7 Distances (km)</h5>
             <hr style="width: 90%; margin-left: 50px;"/>
             <ul class="runInput" id="runInput">
                 <li class="runInputs">--</li>

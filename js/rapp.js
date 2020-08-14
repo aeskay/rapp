@@ -38,10 +38,10 @@ function addTotal(){
         return previous + current;
     }, 0);
 
-    var totalDistVal = totalDist.innerText = total.toFixed(2) + 'm';
-    avgDist.innerText = (total/7).toFixed(2) + 'm';
+    var totalDistVal = totalDist.innerText = total.toFixed(2) + 'km';
+    avgDist.innerText = (total/7).toFixed(2) + 'km';
     var highest = Math.max(...listArr);
-    highDist.innerText = highest + 'm';
+    highDist.innerText = highest + 'km';
 }
 
 $(document).ready(function(){
